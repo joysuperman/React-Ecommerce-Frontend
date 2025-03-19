@@ -12,7 +12,7 @@ Currently, two official plugins are available:
 To get started, clone the repository and install the dependencies:
 
 ```sh
-git clone https://github.com/your-username/ecom_front-end.git
+git clone https://github.com/joysuperman/ecom_front-end.git
 cd ecom_front-end
 npm install
 ```
