@@ -1,6 +1,7 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import LogoBack from '../../assets/images/logo-white.png';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -8,7 +9,9 @@ export default function Footer() {
         <Container>
             <div className="row">
                 <div className="col-md-3">
-                    <img src={LogoBack} alt="Logo Back" width="170"/>
+                    <Link to="/">
+                        <img src={LogoBack} alt="Logo Back" width="170"/>
+                    </Link>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Donec ac purus nec diam laoreet sollicitudin. </p>
                 </div>
                 <div className="col-md-3 col-6">

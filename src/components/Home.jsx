@@ -1,4 +1,4 @@
-import {React,} from 'react'
+import {React} from 'react'
 import Layout from './common/Layout';
 import Hero from './common/Hero';
 import LatestProducts from './common/LatestProducts';

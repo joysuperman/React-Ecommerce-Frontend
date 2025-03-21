@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from './common/Layout';
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Container from 'react-bootstrap/Container';
 import ProductImgOne from '../assets/images/eight.jpg';
 import { Link } from 'react-router-dom';
@@ -12,12 +11,12 @@ const Shop = () => {
 
             <section className="section-1 py-5" >
                 <Container>
-                    <Breadcrumb>
-                        <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-                        <Breadcrumb.Item href="/shop" active>
-                            Shop
-                        </Breadcrumb.Item>
-                    </Breadcrumb>
+                    <nav aria-label="breadcrumb">
+                        <ol className="breadcrumb">
+                            <li className="breadcrumb-item"><Link to={'/'}>Home</Link></li>
+                            <li className="breadcrumb-item active" aria-current="page">Shop</li>
+                        </ol>
+                    </nav>
 
 
                     <div className="row g-4">
