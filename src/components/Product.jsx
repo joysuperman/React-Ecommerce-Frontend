@@ -1,6 +1,5 @@
 import {React, useState} from 'react'
 import Layout from './common/Layout';
-import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import Container from 'react-bootstrap/Container';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Thumbs, FreeMode, Navigation  } from 'swiper/modules';

@@ -1,4 +1,4 @@
-import React from 'react'
+import {React, useState} from 'react'
 import Layout from './common/Layout'
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
@@ -6,6 +6,11 @@ import Table from 'react-bootstrap/Table';
 import productImg from '../assets/images/Mens/five.jpg';
 
 export default function Checkout() {
+    const [paymentMethod, setPaymentMethod] = useState('cod');
+
+    const handlePaymentMethod = (e) => {
+        setPaymentMethod(e.target.value);
+    }
   return (
     <Layout>
         <section className="product-details py-5" >
@@ -74,7 +79,7 @@ export default function Checkout() {
                                 <tr>
                                     <td width={60}>
                                         <Link to={'#'}>
-                                            <img src={productImg} alt="Image" width={40}/>
+                                            <img src={productImg} alt="Image" width={50}/>
                                         </Link>
                                     </td>
                                     <td valign='middle'>
@@ -92,6 +97,7 @@ export default function Checkout() {
                             </tbody>
                         </Table>
                         <hr />
+
                         <div className="d-flex justify-content-between border-bottom py-3">
                             <div><strong>Subtotal:</strong></div>
                             <div>$40</div>
@@ -104,19 +110,20 @@ export default function Checkout() {
                             <div><strong>Subtotal:</strong></div>
                             <div>$40</div>
                         </div>
+                        
                         <div className='mt-4'>
                             <h3>Payment Method</h3>
                             <hr />
                         </div>
                         <div>
                             <div className="form-check">
-                                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
+                                <input className="form-check-input" type="radio" checked={paymentMethod == 'stripe'} value={'stripe'} name="flexRadioDefault" id="flexRadioDefault1" onChange={handlePaymentMethod} />
                                 <label className="form-check-label" htmlFor="flexRadioDefault1">
                                     Stripe
                                 </label>
                             </div>
                             <div className="form-check">
-                                <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"/>
+                                <input className="form-check-input" type="radio" checked={paymentMethod == 'cod'} value={'cod'} name="flexRadioDefault" id="flexRadioDefault2"  onChange={handlePaymentMethod}/>
                                 <label className="form-check-label" htmlFor="flexRadioDefault2">
                                     COD
                                 </label>
