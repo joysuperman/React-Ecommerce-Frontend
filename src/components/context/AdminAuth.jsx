@@ -1,6 +1,7 @@
 import { createContext } from 'react';
 import { useState } from 'react';
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const AdminAuthContext = createContext();
 
 export const AdminAuthProvider = ({ children }) => {
@@ -12,7 +13,7 @@ export const AdminAuthProvider = ({ children }) => {
     }
 
     const logout = () => {
-        localStorage.removeItem(adminInfo);
+        localStorage.removeItem('adminInfo');
         setUser(null);
     }
 

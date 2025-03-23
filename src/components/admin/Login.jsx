@@ -49,7 +49,7 @@ export default function Login() {
     }
   return (
     <Layout>
-        <section className="product-details py-5 h-100" >
+        <section className="product-details py-5 min-vh-100" >
             <Container>
                 <div className="row">
                     <div className="col-md-4 offset-md-4">
