@@ -12,9 +12,7 @@ export default function Dashboard({title ="Dashboard"}) {
                         <h1>1</h1>
                         <p>User</p>
                     </div>
-                    <div className="card-footer">
-                        <Link to={'#'}>View User</Link>
-                    </div>
+                    <Link className="card-footer" to={'#'}>View User</Link>
                 </div>
             </div>
 
@@ -24,9 +22,7 @@ export default function Dashboard({title ="Dashboard"}) {
                         <h1>1</h1>
                         <p>Orders</p>
                     </div>
-                    <div className="card-footer">
-                        <Link to={'#'}>View Orders</Link>
-                    </div>
+                    <Link className="card-footer" to={'#'}>View Orders</Link>
                 </div>
             </div>
             <div className="col-md-4">
@@ -35,9 +31,7 @@ export default function Dashboard({title ="Dashboard"}) {
                         <h1>1</h1>
                         <p>Products</p>
                     </div>
-                    <div>
-                        <Link className="card-footer" to={'#'}>View Products</Link>
-                    </div>
+                    <Link className="card-footer" to={'#'}>View Products</Link>
                 </div>
             </div>
         </div>    

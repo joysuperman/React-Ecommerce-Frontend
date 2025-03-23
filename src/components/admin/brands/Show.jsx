@@ -64,7 +64,7 @@ export default function Show({title ="Brands"}) {
                         <tbody>
 
                             {
-                                Brands.map(category =>{
+                                brands.map(category =>{
                                     return (
                                         <tr>
                                             <th>{category.id}</th>
