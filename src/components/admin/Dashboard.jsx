@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import AdminLayout from './AdminLayout';
 
 
-export default function Dashboard({title ="Dashboard"}) {
+export default function Dashboard() {
   return (
-    <AdminLayout title = {title}>
+    <AdminLayout title = "Dashboard">
         <div className="row">
             <div className="col-md-4">
                 <div className="card shadow">

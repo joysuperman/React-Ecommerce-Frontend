@@ -11,7 +11,10 @@ import Dashboard from './components/admin/Dashboard'
 import { AdminRequireAuth } from './components/admin/AdminRequireAuth';
 import {default as ShowCategories} from './components/admin/category/Show'
 import {default as CreateCategories} from './components/admin/category/Create'
+import {default as CreateEdit} from './components/admin/category/Edit'
 import {default as ShowBrands} from './components/admin/brands/Show'
+import {default as CreateBrands} from './components/admin/brands/Create'
+import {default as EditBrands} from './components/admin/brands/Edit'
 
 function App() {
   return (
@@ -39,10 +42,25 @@ function App() {
               <CreateCategories />
             </AdminRequireAuth>
           } />
+          <Route path="/admin/categories/edit/:id" element={
+            <AdminRequireAuth>
+              <CreateEdit />
+            </AdminRequireAuth>
+          } />
 
           <Route path="/admin/brands" element={
             <AdminRequireAuth>
               <ShowBrands />
+            </AdminRequireAuth>
+          } />
+          <Route path="/admin/brands/create" element={
+            <AdminRequireAuth>
+              <CreateBrands />
+            </AdminRequireAuth>
+          } />
+          <Route path="/admin/brands/edit/:id" element={
+            <AdminRequireAuth>
+              <EditBrands />
             </AdminRequireAuth>
           } />
         </Routes>
