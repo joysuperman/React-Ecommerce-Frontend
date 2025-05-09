@@ -40,7 +40,7 @@ export default function Login() {
 
                 localStorage.setItem('adminInfo', JSON.stringify(adminInfo))
                 login(adminInfo)
-                navigate ('/admin/dashboard')
+                navigate ('/admin/')
             }else{
                 toast.error(result.message);
             }

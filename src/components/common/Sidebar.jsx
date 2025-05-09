@@ -7,10 +7,10 @@ export default function Sidebar() {
      const location = useLocation();
   return (
     <div className="card shadow border-0">
-        <div className="card-body">
+        <div className="card-body p-0">
             <div className='list-group list-group-flush'>
                 {[
-                    { path: '/admin/dashboard', label: 'Dashboard' },
+                    { path: '/admin/', label: 'Dashboard' },
                     { path: '/admin/users', label: 'Users' },
                     { path: '/admin/products', label: 'Products' },
                     { path: '/admin/orders', label: 'Orders' },
